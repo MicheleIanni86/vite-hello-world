@@ -1,15 +1,17 @@
 <script>
 import AppTitle from './components/AppTitle.vue'
+import AppHero from './components/AppHero.vue'
 
 export default {
  data() {
   return {
-    saluti: "Ciao a tutti!!!"
+    saluti: "CIAO A TUTTI!!!"
   }
  },
 
  components:{
-  titolo: AppTitle,
+   AppTitle,
+  immagineJumbo: AppHero
  }
 
 }
@@ -17,11 +19,13 @@ export default {
 
 <template>
   <h1 class="saluti">{{ saluti }}</h1>
-  <titolo class="center" />
+  <AppTitle class="center" />
+  <immagineJumbo/>
 </template>
 
 <style>
-@import url('../src/assets/main.css');
-
-
+/*@import url('../src/assets/main.css');*/
+.center {
+    text-align: center;
+}
 </style>
